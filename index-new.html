@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Менторство для разработчиков | Рост зарплаты в IT x3 за 3 месяца
+    </title>
+    <meta
+      name="description"
+      content="Помогаю разработчикам увеличить доход в 2-4 раза за 3 месяца. Подготовка к собеседованиям, упаковка опыта, сопровождение до оффера."
+    />
+
+    <!-- OpenGraph -->
+    <meta
+      property="og:title"
+      content="Менторство для разработчиков - Рост зарплаты x3"
+    />
+    <meta
+      property="og:description"
+      content="Помогаю разработчикам получать офферы x3 от текущей зарплаты за 3 месяца"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://your-domain.com" />
+    <meta property="og:image" content="https://your-domain.com/og-image.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Менторство для разработчиков - Рост зарплаты x3"
+    />
+    <meta
+      name="twitter:description"
+      content="Помогаю разработчикам получать офферы x3 от текущей зарплаты за 3 месяца"
+    />
+    <meta
+      name="twitter:image"
+      content="https://your-domain.com/twitter-image.jpg"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Custom Configuration -->
+    <script>
+      tailwind.config = {
+        darkMode: "media",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#fffbeb",
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#d97706",
+                700: "#b45309",
+                800: "#92400e",
+                900: "#78350f",
+              },
+              accent: {
+                100: "#fed7aa",
+                200: "#fdba74",
+                300: "#fb923c",
+                400: "#f97316",
+                500: "#ea580c",
+                600: "#c2410c",
+                700: "#9a3412",
+                800: "#7c2d12",
+                900: "#6b1d0c",
+              },
+              honey: {
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.6s ease-out",
+              "slide-up": "slideUp 0.8s ease-out",
+              "scale-in": "scaleIn 0.5s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(30px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+              scaleIn: {
+                "0%": { transform: "scale(0.9)", opacity: "0" },
+                "100%": { transform: "scale(1)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      .gradient-bg {
+        background: linear-gradient(
+          135deg,
+          #0f172a 0%,
+          #1e293b 50%,
+          #334155 100%
+        );
+      }
+
+      .gradient-accent {
+        background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+      }
+
+      .glow {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+      }
+
+      .glow-hover:hover {
+        box-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+        transform: translateY(-2px);
+      }
+
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+
+      .card-hover:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Dark mode support */
+      @media (prefers-color-scheme: dark) {
+        .dark\:bg-slate-900 {
+          background-color: #0f172a;
+        }
+
+        .dark\:text-white {
+          color: #ffffff;
+        }
+
+        .dark\:bg-slate-800 {
+          background-color: #1e293b;
+        }
+      }
+
+      /* Telegram button */
+      .telegram-float {
+        position: fixed;
+        bottom: 100px;
+        right: 20px;
+        z-index: 50;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+      }
+
+      /* FAQ accordion */
+      .faq-item {
+        border: 1px solid #e2e8f0;
+        border-radius: 12px;
+        margin-bottom: 16px;
+        overflow: hidden;
+      }
+
+      .dark .faq-item {
+        border-color: #334155;
+      }
+
+      .faq-question {
+        padding: 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .faq-question:hover {
+        background-color: #f8fafc;
+      }
+
+      .dark .faq-question:hover {
+        background-color: #1e293b;
+      }
+
+      .faq-answer {
+        padding: 0 20px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+
+      .faq-answer.active {
+        max-height: 200px;
+        padding: 0 20px 20px;
+      }
+    </style>
+  </head>
+  <body
+    class="font-sans bg-white dark:bg-slate-900 text-gray-900 dark:text-white"
+  >
+    <!-- Navigation -->
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-gray-200 dark:border-slate-800"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex items-center">
+            <span
+              class="text-2xl font-bold bg-gradient-to-r from-primary-600 to-accent-500 bg-clip-text text-transparent"
+              >DEV РОЙ University</span
+            >
+          </div>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#program"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Программа</a
+            >
+            <a
+              href="#results"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Результаты</a
+            >
+            <a
+              href="#pricing"
+              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              >Тарифы</a
+            >
+            <a
+              href="https://t.me/your_username"
+              target="_blank"
+              class="bg-gradient-to-r from-primary-600 to-accent-500 text-white px-6 py-2 rounded-full font-medium glow-hover transition-all duration-300"
+            >
+              Получить консультацию
+            </a>
+          </div>
+
+          <button id="mobile-menu-btn" class="md:hidden p-2">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800"
+      >
+        <div class="px-4 py-4 space-y-4">
+          <a
+            href="#program"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >Программа</a
+          >
+          <a
+            href="#results"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >Результаты</a
+          >
+          <a
+            href="#pricing"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+            >Тарифы</a
+          >
+          <a
+            href="https://t.me/your_username"
+            target="_blank"
+            class="block bg-gradient-to-r from-primary-600 to-accent-500 text-white px-6 py-3 rounded-full font-medium text-center"
+            >Получить консультацию</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden pt-16 md:pt-0"
+    >
+      <!-- Background pattern -->
+      <div class="absolute inset-0 opacity-10">
+        <div
+          class="absolute top-20 left-20 w-64 h-64 bg-primary-500 rounded-full blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-20 right-20 w-96 h-96 bg-accent-500 rounded-full blur-3xl"
+        ></div>
+      </div>
+
+      <div
+        class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <div class="animate-on-scroll">
+          <h1
+            class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-12 leading-tight mt-10 md:mt-0"
+          >
+            Увеличь свой доход в IT в
+            <span
+              class="bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent"
+              >2–4 раза</span
+            >
+            за 3 месяца
+          </h1>
+
+          <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+            Помогаю разработчикам от Junior до Senior получать офферы x3 от
+            текущей зарплаты
+          </p>
+
+          <p class="text-lg text-gray-400 mb-12 max-w-2xl mx-auto">
+            Разберём слабые места, прокачаем hard и soft скиллы, подготовим
+            резюме, легенду и выведем на рынок — с базой рекрутеров и готовыми
+            гайдами
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <a
+              href="https://t.me/your_username"
+              target="_blank"
+              class="bg-gradient-to-r from-primary-600 to-accent-500 text-white px-8 py-4 rounded-2xl font-bold glow-hover transition-all duration-300"
+            >
+              Получить консультацию
+            </a>
+          </div>
+        </div>
+
+        <!-- How it works cards -->
+        <div class="grid md:grid-cols-3 gap-8 mt-20">
+          <div
+            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i data-lucide="search" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Диагностика</h3>
+            <p class="text-gray-300">
+              Анализ текущего уровня, сильных и слабых сторон
+            </p>
+          </div>
+
+          <div
+            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i data-lucide="target" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Подготовка</h3>
+            <p class="text-gray-300">
+              Индивидуальный план развития и подготовка к собеседованиям
+            </p>
+          </div>
+
+          <div
+            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i data-lucide="trending-up" class="w-8 h-8 text-white"></i>
+            </div>
+            <h3 class="text-xl font-bold text-white mb-4">Результат</h3>
+            <p class="text-gray-300">
+              Жирные офферы и поддержка на испытательном сроке
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 md:py-32 bg-gray-50 dark:bg-slate-800">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16 animate-on-scroll">
+          <h2 class="text-3xl md:text-5xl font-bold mb-6">Знакомо?</h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+          >
+            <div
+              class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i
+                data-lucide="dollar-sign"
+                class="w-6 h-6 text-red-600 dark:text-red-400"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Зарплата не растёт</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Уже долгое время доход остаётся на том же уровне
+            </p>
+          </div>
+
+          <div
+            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            style="animation-delay: 0.1s"
+          >
+            <div
+              class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i
+                data-lucide="phone-missed"
+                class="w-6 h-6 text-orange-600 dark:text-orange-400"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">HR не зовут на скрининги</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Раньше звонили часто, теперь редко или не звонят вовсе
+            </p>
+          </div>
+
+          <div
+            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            style="animation-delay: 0.2s"
+          >
+            <div
+              class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i
+                data-lucide="x-circle"
+                class="w-6 h-6 text-yellow-600 dark:text-yellow-400"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Заваливаешь собесы</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Технические интервью проходят неудачно
+            </p>
+          </div>
+
+          <div
+            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            style="animation-delay: 0.3s"
+          >
+            <div
+              class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i
+                data-lucide="user-x"
+                class="w-6 h-6 text-blue-600 dark:text-blue-400"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Боишься "продавить себя"</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Сложно презентовать свои навыки и достижения
+            </p>
+          </div>
+
+          <div
+            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            style="animation-delay: 0.4s"
+          >
+            <div
+              class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i
+                data-lucide="bot"
+                class="w-6 h-6 text-purple-600 dark:text-purple-400"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">
+              Страшно, что ИИ заберет работу
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Не уверен в будущем и своей востребованности
+            </p>
+          </div>
+          <div
+            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            style="animation-delay: 0.5s"
+          >
+            <div
+              class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+            >
+              <i
+                data-lucide="brain"
+                class="w-6 h-6 text-indigo-600 dark:text-indigo-400"
+              ></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Синдром самозванца</h3>
+            <p class="text-gray-600 dark:text-gray-400">
+              Занижаешь свой уровень, избегаешь middle/senior позиций, выбираешь
+              низкооплачиваемые роли.
+            </p>
+          </div>
+        </div>
+        <div class="text-center mt-20 animate-on-scroll">
+          <p
+            class="text-3xl md:text-5xl font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent"
+          >
+            Я знаю, как решить эти проблемы и помогу тебе!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="program" class="py-20 md:py-32 gradient-bg">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
