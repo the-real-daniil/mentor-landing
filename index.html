@@ -240,6 +240,7 @@
         max-height: 200px;
         padding: 0 20px 20px;
       }
+      html { color-scheme: light; }
     </style>
   </head>
   <body
@@ -1592,23 +1593,8 @@
         icon.classList.toggle("rotate-180");
       }
 
-      // Dark mode detection and theme switching
-      if (
-        window.matchMedia &&
-        window.matchMedia("(prefers-color-scheme: dark)").matches
-      ) {
-        document.documentElement.classList.add("dark");
-      }
-
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (e) => {
-          if (e.matches) {
-            document.documentElement.classList.add("dark");
-          } else {
-            document.documentElement.classList.remove("dark");
-          }
-        });
+      // Force consistent light backgrounds regardless of device theme
+      document.documentElement.classList.remove("dark");
     </script>
   </body>
 </html>
