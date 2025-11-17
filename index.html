@@ -166,21 +166,6 @@
         transform: translateY(0);
       }
 
-      /* Dark mode support */
-      @media (prefers-color-scheme: dark) {
-        .dark\:bg-slate-900 {
-          background-color: #0f172a;
-        }
-
-        .dark\:text-white {
-          color: #ffffff;
-        }
-
-        .dark\:bg-slate-800 {
-          background-color: #1e293b;
-        }
-      }
-
       /* Telegram button */
       .telegram-float {
         position: fixed;
@@ -202,14 +187,10 @@
 
       /* FAQ accordion */
       .faq-item {
-        border: 1px solid #e2e8f0;
+        border: 1px solid #334155;
         border-radius: 12px;
         margin-bottom: 16px;
         overflow: hidden;
-      }
-
-      .dark .faq-item {
-        border-color: #334155;
       }
 
       .faq-question {
@@ -222,10 +203,6 @@
       }
 
       .faq-question:hover {
-        background-color: #f8fafc;
-      }
-
-      .dark .faq-question:hover {
         background-color: #1e293b;
       }
 
@@ -240,15 +217,15 @@
         max-height: 200px;
         padding: 0 20px 20px;
       }
-      html { color-scheme: light; }
+      html {
+        color-scheme: dark;
+      }
     </style>
   </head>
-  <body
-    class="font-sans bg-white dark:bg-slate-900 text-gray-900 dark:text-white"
-  >
+  <body class="font-sans bg-slate-900 text-white">
     <!-- Navigation -->
     <nav
-      class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-gray-200 dark:border-slate-800"
+      class="fixed top-0 left-0 right-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -262,17 +239,17 @@
           <div class="hidden md:flex items-center space-x-8">
             <a
               href="#program"
-              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              class="text-gray-300 hover:text-primary-400 transition-colors"
               >Программа</a
             >
             <a
               href="#results"
-              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              class="text-gray-300 hover:text-primary-400 transition-colors"
               >Результаты</a
             >
             <a
               href="#pricing"
-              class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+              class="text-gray-300 hover:text-primary-400 transition-colors"
               >Тарифы</a
             >
             <a
@@ -293,22 +270,16 @@
       <!-- Mobile menu -->
       <div
         id="mobile-menu"
-        class="hidden md:hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-800"
+        class="hidden md:hidden bg-slate-900 border-t border-slate-800"
       >
         <div class="px-4 py-4 space-y-4">
-          <a
-            href="#program"
-            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+          <a href="#program" class="block text-gray-300 hover:text-primary-400"
             >Программа</a
           >
-          <a
-            href="#results"
-            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+          <a href="#results" class="block text-gray-300 hover:text-primary-400"
             >Результаты</a
           >
-          <a
-            href="#pricing"
-            class="block text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+          <a href="#pricing" class="block text-gray-300 hover:text-primary-400"
             >Тарифы</a
           >
           <a
@@ -340,7 +311,7 @@
       >
         <div class="animate-on-scroll">
           <h1
-            class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-12 leading-tight mt-10 md:mt-0"
+            class="text-4xl md:text-6xl lg:text-7xl font-black text-white mb-12 leading-tight mt-18 md:mt-0"
           >
             Увеличь свой доход в IT в
             <span
@@ -375,7 +346,7 @@
         <!-- How it works cards -->
         <div class="grid md:grid-cols-3 gap-8 mt-20">
           <div
-            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
+            class="animate-on-scroll bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
           >
             <div
               class="w-16 h-16 bg-gradient-to-r from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center mb-6 mx-auto"
@@ -389,7 +360,7 @@
           </div>
 
           <div
-            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
+            class="animate-on-scroll bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
             style="animation-delay: 0.2s"
           >
             <div
@@ -404,7 +375,7 @@
           </div>
 
           <div
-            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
+            class="animate-on-scroll bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover text-center"
             style="animation-delay: 0.4s"
           >
             <div
@@ -422,7 +393,7 @@
     </section>
 
     <!-- Problem Section -->
-    <section class="py-20 md:py-32 bg-gray-50 dark:bg-slate-800">
+    <section class="py-20 md:py-32 bg-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
           <h2 class="text-3xl md:text-5xl font-bold mb-6">Знакомо?</h2>
@@ -430,109 +401,89 @@
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div
-            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            class="animate-on-scroll bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
           >
             <div
-              class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              class="w-12 h-12 bg-red-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
             >
-              <i
-                data-lucide="dollar-sign"
-                class="w-6 h-6 text-red-600 dark:text-red-400"
-              ></i>
+              <i data-lucide="dollar-sign" class="w-6 h-6 text-red-400"></i>
             </div>
             <h3 class="text-xl font-bold mb-4">Зарплата не растёт</h3>
-            <p class="text-gray-600 dark:text-gray-400">
+            <p class="text-gray-400">
               Уже долгое время доход остаётся на том же уровне
             </p>
           </div>
 
           <div
-            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            class="animate-on-scroll bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
             style="animation-delay: 0.1s"
           >
             <div
-              class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              class="w-12 h-12 bg-orange-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
             >
-              <i
-                data-lucide="phone-missed"
-                class="w-6 h-6 text-orange-600 dark:text-orange-400"
-              ></i>
+              <i data-lucide="phone-missed" class="w-6 h-6 text-orange-400"></i>
             </div>
             <h3 class="text-xl font-bold mb-4">HR не зовут на скрининги</h3>
-            <p class="text-gray-600 dark:text-gray-400">
+            <p class="text-gray-400">
               Раньше звонили часто, теперь редко или не звонят вовсе
             </p>
           </div>
 
           <div
-            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            class="animate-on-scroll bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
             style="animation-delay: 0.2s"
           >
             <div
-              class="w-12 h-12 bg-yellow-100 dark:bg-yellow-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              class="w-12 h-12 bg-yellow-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
             >
-              <i
-                data-lucide="x-circle"
-                class="w-6 h-6 text-yellow-600 dark:text-yellow-400"
-              ></i>
+              <i data-lucide="x-circle" class="w-6 h-6 text-yellow-400"></i>
             </div>
             <h3 class="text-xl font-bold mb-4">Заваливаешь собесы</h3>
-            <p class="text-gray-600 dark:text-gray-400">
-              Технические интервью проходят неудачно
-            </p>
+            <p class="text-gray-400">Технические интервью проходят неудачно</p>
           </div>
 
           <div
-            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            class="animate-on-scroll bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
             style="animation-delay: 0.3s"
           >
             <div
-              class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              class="w-12 h-12 bg-blue-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
             >
-              <i
-                data-lucide="user-x"
-                class="w-6 h-6 text-blue-600 dark:text-blue-400"
-              ></i>
+              <i data-lucide="user-x" class="w-6 h-6 text-blue-400"></i>
             </div>
             <h3 class="text-xl font-bold mb-4">Боишься "продавать себя"</h3>
-            <p class="text-gray-600 dark:text-gray-400">
+            <p class="text-gray-400">
               Сложно презентовать свои навыки и достижения
             </p>
           </div>
 
           <div
-            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            class="animate-on-scroll bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
             style="animation-delay: 0.4s"
           >
             <div
-              class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              class="w-12 h-12 bg-purple-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
             >
-              <i
-                data-lucide="bot"
-                class="w-6 h-6 text-purple-600 dark:text-purple-400"
-              ></i>
+              <i data-lucide="bot" class="w-6 h-6 text-purple-400"></i>
             </div>
             <h3 class="text-xl font-bold mb-4">
               Страшно, что ИИ заберет работу
             </h3>
-            <p class="text-gray-600 dark:text-gray-400">
+            <p class="text-gray-400">
               Не уверен в будущем и своей востребованности
             </p>
           </div>
           <div
-            class="animate-on-scroll bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
+            class="animate-on-scroll bg-slate-900 rounded-2xl p-8 shadow-lg card-hover flex flex-col items-center justify-center min-h-[220px] text-center"
             style="animation-delay: 0.5s"
           >
             <div
-              class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
+              class="w-12 h-12 bg-indigo-900 rounded-xl flex items-center justify-center mb-6 mx-auto"
             >
-              <i
-                data-lucide="brain"
-                class="w-6 h-6 text-indigo-600 dark:text-indigo-400"
-              ></i>
+              <i data-lucide="brain" class="w-6 h-6 text-indigo-400"></i>
             </div>
             <h3 class="text-xl font-bold mb-4">Синдром самозванца</h3>
-            <p class="text-gray-600 dark:text-gray-400">
+            <p class="text-gray-400">
               Занижаешь свой уровень, избегаешь middle/senior позиций, выбираешь
               низкооплачиваемые роли.
             </p>
@@ -784,13 +735,13 @@
     </section>
 
     <!-- Results Section -->
-    <section id="results" class="py-20 md:py-32 bg-gray-50 dark:bg-slate-800">
+    <section id="results" class="py-20 md:py-32 bg-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
           <h2 class="text-3xl md:text-5xl font-bold mb-6">
             Результаты учеников
           </h2>
-          <p class="text-xl text-gray-600 dark:text-gray-400">
+          <p class="text-xl text-gray-400">
             Реальные офферы, которые получили мои ребята
           </p>
         </div>
@@ -1116,7 +1067,7 @@
     </section>
 
     <!-- Process Section -->
-    <section class="py-20 md:py-32 bg-gray-50 dark:bg-slate-800">
+    <section class="py-20 md:py-32 bg-slate-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
           <h2 class="text-3xl md:text-5xl font-bold mb-6">
@@ -1148,7 +1099,7 @@
         <div class="grid md:grid-cols-3 gap-8 items-stretch">
           <!-- Lite Plan -->
           <div
-            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover flex flex-col h-full"
+            class="animate-on-scroll bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover flex flex-col h-full"
           >
             <div class="text-center mb-8">
               <h3 class="text-2xl font-bold text-white mb-4">Lite</h3>
@@ -1250,7 +1201,7 @@
 
           <!-- VIP Plan -->
           <div
-            class="animate-on-scroll bg-white/10 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover flex flex-col h-full"
+            class="animate-on-scroll bg-white/5 backdrop-blur-sm rounded-2xl p-8 card-hover flex flex-col h-full"
             style="animation-delay: 0.4s"
           >
             <div class="text-center mb-8">
@@ -1287,7 +1238,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="py-20 md:py-32 bg-gray-50 dark:bg-slate-800">
+    <section class="py-20 md:py-32 bg-slate-800">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16 animate-on-scroll">
           <h2 class="text-3xl md:text-5xl font-bold mb-6">
@@ -1305,7 +1256,7 @@
               ></i>
             </div>
             <div class="faq-answer">
-              <p class="text-gray-600 dark:text-gray-400">
+              <p class="text-gray-400">
                 На текущем рынке даже опытные разработчики сталкиваются с
                 проблемами, связанными с поиском работы и повышением зарплаты.
                 Если ты senior, но при этом твоя зарплата ниже 300к, то тебе
@@ -1323,7 +1274,7 @@
               ></i>
             </div>
             <div class="faq-answer">
-              <p class="text-gray-600 dark:text-gray-400">
+              <p class="text-gray-400">
                 Формат обучения удаленный. Поэтому нет разницы, из какого ты
                 города. Однако стоит отметить, что в Москве и Санкт-Петербурге
                 хороших вакансий все же больше.
@@ -1342,7 +1293,7 @@
               ></i>
             </div>
             <div class="faq-answer">
-              <p class="text-gray-600 dark:text-gray-400">
+              <p class="text-gray-400">
                 Тебе необязательно увольняться, чтоб начать искать новое место
                 работы. Гораздо более выгодный и комфортный вариант — продолжать
                 работать на текущем месте и параллельно собеседоваться.
@@ -1359,7 +1310,7 @@
               ></i>
             </div>
             <div class="faq-answer">
-              <p class="text-gray-600 dark:text-gray-400">
+              <p class="text-gray-400">
                 С тарифом Pro и VIP мы работаем до результата, независимо от
                 того, какое время это займет. Как правило, все получают свой
                 оффер, если не опускают руки и продолжают стремиться. Если по
@@ -1379,7 +1330,7 @@
               ></i>
             </div>
             <div class="faq-answer">
-              <p class="text-gray-600 dark:text-gray-400">
+              <p class="text-gray-400">
                 Базовый минимум — 1 вводный созвон и 3 мок-собеса. Однако
                 количество созвонов неограничено, поэтому ты можешь получить
                 столько созвонов, сколько тебе нужно для достижения результата.
